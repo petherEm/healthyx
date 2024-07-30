@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const SuccessPage = async ({
   params: { userId },
   searchParams,
-}: SearchParamProps & { userId: string }) => {
+}: SearchParamProps) => {
   const appointmentId = (searchParams?.appointmentId as string) || "";
 
   const appointment = await getAppointment(appointmentId);
